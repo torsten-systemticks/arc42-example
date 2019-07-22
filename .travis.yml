@@ -18,3 +18,12 @@ after_error:
 after_failure:
   - docker logs asciidoc-to-html
   - docker logs asciidoc-to-pdf
+
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file:
+    - ./output/arc42-template.pdf
+  skip_cleanup: true
+  on:
+    tags: true
