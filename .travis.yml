@@ -21,8 +21,9 @@ after_failure:
 
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key: $GH_TOKEN
   file:
+    - ./output/arc42-template.html
     - ./output/arc42-template.pdf
   skip_cleanup: true
   on:
