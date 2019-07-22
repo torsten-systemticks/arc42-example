@@ -24,8 +24,8 @@ deploy:
   api_key:
     secure: $GITHUB_TOKEN
   file:
-    - ./output/arc42-template.html
-    - ./output/arc42-template.pdf
+    - ./documents/output/arc42-template.html
+    - ./documents/output/arc42-template.pdf
   skip_cleanup: true
   on:
     tags: true
