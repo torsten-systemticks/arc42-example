@@ -21,7 +21,8 @@ after_failure:
 
 deploy:
   provider: releases
-  api_key: $GH_TOKEN
+  api_key:
+    secure: a5a3ad5f24dc3a3ac95c64855846975cf010cc3b
   file:
     - ./output/arc42-template.html
     - ./output/arc42-template.pdf
