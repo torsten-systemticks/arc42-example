@@ -2,10 +2,10 @@ FROM asciidoctor/docker-asciidoctor
 
 USER root
 
-RUN apt-get update
-RUN apt-get install –y apache2
-RUN apt-get install –y apache2-utils
-RUN apt-get clean
+RUN apt-get update && apt-get install -y \
+        apache2 \
+        apache2-utils \
+    && apt-get clean
 
 EXPOSE 80 CMD [“apache2ctl”, “-D”, “FOREGROUND”]
 
