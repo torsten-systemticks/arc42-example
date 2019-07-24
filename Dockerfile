@@ -2,10 +2,8 @@ FROM asciidoctor/docker-asciidoctor
 
 USER root
 
-RUN apt-get update && apt-get install -y \
-        apache2 \
-        apache2-utils \
-    && apt-get clean
+RUN apk update 
+RUN apk add apache2 apache2-utils
 
 EXPOSE 80 CMD [“apache2ctl”, “-D”, “FOREGROUND”]
 
